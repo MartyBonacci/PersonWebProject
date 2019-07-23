@@ -1,0 +1,32 @@
+body {
+	background-color: gray;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+nav {
+	background-color: lightgray;
+}
+
+nav ul {
+	list-style: none;
+	text-align: right;
+	padding: 9px;
+}
+
+nav ul a {
+	text-decoration: none;
+	color: black;
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 10px;
+}
+
+nav ul a:hover {
+	background-color: coral;
+}
+
+nav ul a li {
+	display: inline-block;
+}
