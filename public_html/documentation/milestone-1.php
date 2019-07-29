@@ -27,7 +27,12 @@
 		</div>
 		<div id="persona">
 			<h2>Persona</h2>
-			<p>A potential employer who gets on my site.  He is looking for a certain skill set, and I aim to have the skills proved on my site.</p>
+			<p>Name: Josh Higgins</p>
+			<p>Age: 25</p>
+			<p>As a potential employer at ABC Technologies, he will visit my side to see if my skillset meets his needs.</p>
+			<p>The goal of this site is to get me employed by impressing potential employers.</p>
+
+
 		</div>
 	</body>
 </html>
