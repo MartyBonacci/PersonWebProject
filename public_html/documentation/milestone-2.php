@@ -61,11 +61,11 @@
 	<section>
 		<h1>Wireframe:</h1>
 		<h3>Mobile</h3>
-		<img src="docimgs/mobile.jpg" alt="Mobile Wireframe" width="500" height="auto"/>
+		<img src="docimgs/mobile.jpg" alt="Mobile Wireframe" width="500" height="500"/>
 
 		<h3>Desktop</h3>
-		<img src="docimgs/20190801_002344.jpg" alt="Desktop Wireframe" width="500" height="auto"/>
-		<img src="docimgs/20190801_002355.jpg" alt="Desktop Wireframe" width="500" height="auto"/>
+		<img src="docimgs/20190801_002344.jpg" alt="Desktop Wireframe" width="500" height="500"/>
+		<img src="docimgs/20190801_002355.jpg" alt="Desktop Wireframe" width="500" height="500"/>
 	</section>
 </body>
 </html>
