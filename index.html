@@ -17,9 +17,20 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 				  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 				  crossorigin="anonymous"></script>
+
+		<!-- jQuery Form, Additional Methods, Validate -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+		<!-- Your JavaScript Form Validator -->
+		<script src="js/form-validate.js"></script>
+
+		<!-- Google reCAPTCHA -->
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
-	<body class="bg-primary mb-10px">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<body class="bg-primary">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light mb-1 navbar-fixed-top">
 			<a class="navbar-brand" href="#">Navbar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,6 +88,70 @@
 					<p>
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 					</p>
+				</div>
+			</div>
+			<div class="form-container">
+				<form id="mailer-form" action="php/mailer.php" method="post">
+
+					<!-- NAME -->
+					<div class="form-group">
+						<label for="name">Name:<span>*</span></label>
+						<div class="input-group">
+							<div class="input-group-container">
+								<span class="input-group-text"></span>
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</div>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
+						</div>
+					</div>
+
+					<!-- SUBJECT -->
+					<div class="form-group">
+						<label for="subject">Subject</label>
+						<div class="input-group">
+							<div class="input-group-container">
+								<span class="input-group-text"></span>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject"/>
+						</div>
+					</div>
+
+					<!-- EMAIL -->
+					<div class="form-group">
+						<label for="email">Email<span>*</span></label>
+						<div class="input-group">
+							<div class="input-group-container">
+								<span class="input-group-text"></span>
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</div>
+							<input type="email" class="form-control" id="email" name="email" placeholder="email"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message<span>*</span></label>
+						<div class="input-group">
+							<div class="input-group-container">
+								<span class="input-group-text"></span>
+								<i class="fa fa-comment" aria-hidden="true"></i>
+							</div>
+							<textarea class="form-control" rows="5" id="message" name="message" placeholder="Massage (2000 characters max)"></textarea>
+						</div>
+					</div>
+
+					<!-- REEEEEEEECAPTCHAAAAAAAAAA -->
+					<div class="g-recaptcha" data-sitekey="6Le_AbMUAAAAAGpck8COusTuninBXSp5oaNLio_P"></div>
+
+					<button class="btn btn-success" type="submit"><i class="fa fa-paper"></i>Send</button>
+					<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i>Reset</button>
+				</form>
+
+				<!--empty area for form error/success output-->
+				<div class="row">
+					<div class="col-xs-12">
+						<div id="output-area"></div>
+					</div>
 				</div>
 			</div>
 			<footer>
