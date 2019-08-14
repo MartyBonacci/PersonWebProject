@@ -5,6 +5,5 @@
     "kriswallsmith/buzz": "@stable",
     "nyholm/psr7": "@stable",
     "swiftmailer/swiftmailer": "@stable"
-
   }
 }
