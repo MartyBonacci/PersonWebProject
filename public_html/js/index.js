@@ -57,7 +57,7 @@ $(document).ready(function(){
 		submitHandler: function(form) {
 			$("#mailer-form").ajaxSubmit({
 				type: "POST",
-				url: $("#my-contact-form").attr("action"),
+				url: $("#mailer-form").attr("action"),
 
 				success: function(ajaxOutput) {
 					// clear the output area's formatting
@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 					// reset the form if it was successful
 					if($(".alert-success").length >= 1) {
-						$("#my-contact-form")[0].reset();
+						$("#mailer-form")[0].reset();
 					}
 				}
 			})

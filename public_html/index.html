@@ -24,7 +24,7 @@
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 
 		<!-- Your JavaScript Form Validator -->
-		<script src="js/form-validate.js"></script>
+		<script src="public_html/js/form-validate.js"></script>
 
 		<!-- Google reCAPTCHA -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -91,11 +91,13 @@
 				</div>
 			</div>
 			<div class="form-container">
-				<form id="mailer-form" action="php/mailer.php" method="post">
+
+				<!-- FORM START -->
+				<form id="mailer-form" action="../php/index.php" method="post">
 
 					<!-- NAME -->
 					<div class="form-group">
-						<label for="name">Name:<span>*</span></label>
+						<label for="name">Name<span>*</span></label>
 						<div class="input-group">
 							<div class="input-group-container">
 								<span class="input-group-text"></span>
@@ -141,7 +143,7 @@
 					</div>
 
 					<!-- REEEEEEEECAPTCHAAAAAAAAAA -->
-					<div class="g-recaptcha" data-sitekey="6Le_AbMUAAAAAGpck8COusTuninBXSp5oaNLio_P"></div>
+					<div class="g-recaptcha" data-sitekey="6LdqCrMUAAAAAAkQltSkr47w13iABQvsq6uM22a5"></div>
 
 					<button class="btn btn-success" type="submit"><i class="fa fa-paper"></i>Send</button>
 					<button class="btn btn-warning" type="reset"><i class="fa fa-ban"></i>Reset</button>
