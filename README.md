@@ -19,3 +19,14 @@ The grade for this submission is Tier 1.  **Note that an average of Tier 2 on th
 * The resubmission was late and missing a link to Github.
 
 Overall, although you added the goal and added a very small amount of work on the persona, the remaining issues were not addressed.  The grade for this resubmission is unchanged.  **The final grade for Milestone 1 is a Tier 1**.
+
+## Milestone 2a
+Good work. Your content strategy is well thought out and detailed. This will definitely help you as you move into the development phase. Your wireframes although drawn, will get the point across. It would have been more beneficial to use a digital drawing as opposed to something handdrawn. This comes in handy in the professional real when working with clients and teammate projects. 
+
+Here are a few recommedations:
+Google Fonts for custom typography - it has ~1000 fonts and is easy to integrate.
+FontAwesome is a good quality free library for including iconography.
+
+We'll be building PWP in a file named index.php inside of /public_html. Please note that no frontend-facing site files should live outside of the /public_html directory. Remember use an organized and standards-compliant directory structure to house all images, JavaScript, CSS, etc. We are done with the /documentation directory for now!
+
+Your milestone passes at Tier II.
