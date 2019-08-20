@@ -13,10 +13,6 @@ $(document).ready(function(){
 	 * @author Rochelle Lewis <rlewis37@cnm.edu>
 	 **/
 
-	$("#submit").onclick(function(event) {
-		event.preventDefault();
-	});
-
 	/* begin validate function here */
 	$("#mailer-form").validate({
 
