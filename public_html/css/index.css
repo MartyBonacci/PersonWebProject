@@ -1,28 +1,4 @@
-body {
-	background-color: gray;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
-}
-
-div.container {
-	display: flex;
-}
-
-div.flex-div {
-	background-color: black;
-}
-
-/* Desktop screen media query */
-@media screen and (min-width: 1100px) {
-	div.container {
-		flex-direction: row;
-	}
-}
-
-/* Mobile media query */
-@media screen and (max-width: 720px) {
-	div.container {
-		flex-direction: column;
-	}
+.g-recaptcha {
+	padding-left: auto;
+	padding-right: auto;
 }
