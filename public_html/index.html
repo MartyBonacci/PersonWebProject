@@ -39,7 +39,7 @@
 					</li>
 					<li>
 						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#form-modal">
 							Email Me!
 						</button>
 					</li>
@@ -49,7 +49,7 @@
 							Resume/Professional
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Resume</a>
+							<a class="dropdown-item" href="#" data-toggle="modal" data-target="#resume-modal">Resume</a>
 							<a class="dropdown-item" href="https://www.linkedin.com/in/mark-waid-469845a6/">LinkedIn</a>
 							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="https://codecanna.github.io">Blog</a>
@@ -66,6 +66,7 @@
 				<div id="about-me" class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light"
 					  style="width: 100%;">
 					<h2>About Me</h2>
+					<img src="resources/images/coding.png" width="100" height="100" alt="Me"/>
 					<p>
 						Hello! My name is Mark Waid Jr, I am a Deep Dive Coding Bootcamp alumni. I have always loved tech, and
 						it has been a dream of mine to work in the tech industry, specifically the software development side
@@ -104,9 +105,30 @@
 			</div>
 		</div>
 
+		<!-- MODAL FOR RESUME -->
+		<div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">My Resume</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<embed src="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" frameborder="0" width="100%" height="400px" />
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<a href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank"><button type="button" class="btn btn-primary">Save Resume</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- MODALS FOR THE CARDS -->
 
-		<!-- First nave menu -->
+		<!-- First nave menu modal -->
 		<div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 			  aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -164,6 +186,32 @@
 			</div>
 		</div>
 
+		<!-- Archlinux Installer Modal -->
+		<div class="modal fade" id="archInstaller" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+			  aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Archlinux Installer</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<h3>No Codepen Available Sorry!</h3>
+						<p>
+							Since this coding example is written in Bash and is written for a very specific purpose, there is
+							no codepen available for it. However please feel free to check out the code on GitHub, and try it
+							if you have a spare machine laying around that you wanna install Archlinux on.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Site content cards -->
 		<div id="github" class="container mt-5">
 			<div class="row">
@@ -174,7 +222,8 @@
 						<img src="resources/images/nav.png" class="card-img-top" alt="...">
 						<div class="card-body">
 							<p class="card-text">
-								This is the first nav menu I ever made.  I used simple jquery, and lots of CSS to get this menu to work the way I generally want.
+								This is the first nav menu I ever made. I used simple jquery, and lots of CSS to get this menu
+								to work the way I generally want.
 							</p>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
 								Open Codepen Example
@@ -191,7 +240,8 @@
 						<img src="resources/images/clock.png" class="card-img-top" alt="...">
 						<div class="card-body">
 							<p class="card-text">
-								This example showcases some fun I was having with a really cool JS library called CreateJS.  It's a simple clock.
+								This example showcases some fun I was having with a really cool JS library called CreateJS. It's
+								a simple clock.
 							</p>
 							<!-- Button trigger modal -->
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createClock">
@@ -209,9 +259,10 @@
 						<img src="resources/images/coding.png" class="card-img-top" alt="...">
 						<div class="card-body">
 							<p class="card-text">
-								This script installs Archlinux onto a computer taking user input for partitioning and formatting.  Written in Bash.
+								This script installs Archlinux onto a computer taking user input for partitioning and
+								formatting. Written in Bash.
 							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#archInstaller">
 								Open Codepen Example
 							</button>
 							<br>
@@ -219,42 +270,52 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- My Site Before Camp -->
+				<div class="col mt-5">
+					<div class="card ml-auto mr-auto" style="width: 18rem;">
+						<img src="resources/images/bizz.png" class="card-img-top" alt="...">
+						<div class="card-body">
+							<p class="card-text">
+								This simple site is my first full website I ever developed, I wrote everything and used Jquery only.
+							</p>
+							<button type="button" class="btn btn-primary" data-toggle="modal"
+									  data-target="#bizzSiteModal">
+								Open Site Deployment
+							</button>
+							<br>
+							<a href="https://github.com/CodeCanna/my_bizz">Link to Example</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- My ProDev Site -->
 				<div class="col mt-5">
 					<div class="card ml-auto mr-auto" style="width: 18rem;">
 						<img src="resources/images/coding.png" class="card-img-top" alt="...">
 						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-								card's content.</p>
+							<p class="card-text">
+								This site showcases my experience throughout the Deep Dive Coding Bootcamp.
+							</p>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-								Open Codepen Example
+								Open Site Deployment
 							</button>
 							<br>
 							<a href="#">Link to Example</a>
 						</div>
 					</div>
 				</div>
+
+				<!-- Capstone Project -->
 				<div class="col mt-5">
 					<div class="card ml-auto mr-auto" style="width: 18rem;">
 						<img src="resources/images/coding.png" class="card-img-top" alt="...">
 						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-								card's content.</p>
+							<p class="card-text">
+								This is my main capstone project I completed while I went throught the bootcamp.  This project was a team effort.
+							</p>
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-								Open Codepen Example
-							</button>
-							<br>
-							<a href="#">Link to Example</a>
-						</div>
-					</div>
-				</div>
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/coding.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-								card's content.</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-								Open Codepen Example
+								Open Site Deployment
 							</button>
 							<br>
 							<a href="#">Link to Example</a>
@@ -272,8 +333,8 @@
 
 		</div>
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		<!-- Form Modal -->
+		<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 			  aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
