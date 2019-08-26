@@ -8,23 +8,12 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 				integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-		<!-- jQuery Form, Additional Methods, Validate -->
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
-
-		<!-- Your JavaScript Form Validator -->
-		<script src="public_html/js/form-validate.js"></script>
-
 		<!-- Google reCAPTCHA -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body class="m-0 p-0 w-100 container-fluid bg-dark">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light mb-5">
-			<a class="navbar-brand" href="#">Mark Waid Jr</a>
+			<a class="navbar-brand" href="#about-me">Mark Waid Jr</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -38,32 +27,20 @@
 						<a class="nav-link" href="#github">GitHub</a>
 					</li>
 					<li>
-						<!-- Button trigger modal -->
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#form-modal">
-							Email Me!
-						</button>
+						<a class="nav-link" href="#" data-toggle="modal" data-target="#resume-modal">Resume</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Resume/Professional
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#" data-toggle="modal" data-target="#resume-modal">Resume</a>
-							<a class="dropdown-item" href="https://www.linkedin.com/in/mark-waid-469845a6/">LinkedIn</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="https://codecanna.github.io">Blog</a>
-						</div>
+					<li>
+						<!-- Trigger Email Me Modal -->
+						<a href="#" data-toggle="modal" data-target="#form-modal" class="nav-link">Email Me!</a>
 					</li>
 				</ul>
 			</div>
-		</nav>
+		</nav><!-- NAV END -->
 
-		<div class="container">
+		<div class="container mt-5">
 			<div class="row ">
-
 				<!-- About Me -->
-				<div id="about-me" class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light"
+				<div id="about-me" class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
 					  style="width: 100%;">
 					<h2>About Me</h2>
 					<img src="resources/images/coding.png" width="100" height="100" alt="Me"/>
@@ -79,7 +56,7 @@
 				</div>
 
 				<!-- My interests -->
-				<div id="my-interests" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light"
+				<div id="my-interests" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
 					  style="width: 100%;">
 					<h2>My Interests</h2>
 					<p>
@@ -92,7 +69,7 @@
 				</div>
 
 				<!-- My education -->
-				<div id="my-education" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light"
+				<div id="my-education" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
 					  style="width: 100%;">
 					<h2>My Education</h2>
 					<p>
@@ -103,316 +80,322 @@
 					</p>
 				</div>
 			</div>
-		</div>
 
-		<!-- MODAL FOR RESUME -->
-		<div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLongTitle">My Resume</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<embed src="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" frameborder="0" width="100%" height="400px" />
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<a href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank"><button type="button" class="btn btn-primary">Save Resume</button></a>
+
+			<!-- MODAL FOR RESUME -->
+			<div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+				  aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">My Resume</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<img src="resources/images/resume.png" alt="My Resume Preview Image" width="100%" height="100%"/>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<a href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank">
+								<button type="button" class="btn btn-primary">Save Resume</button>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- MODALS FOR THE CARDS -->
+			<!-- MODALS FOR THE CARDS -->
 
-		<!-- First nave menu modal -->
-		<div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-			  aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">My first nav menu.</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result"
-							data-user="codecanna" data-slug-hash="XWrNqxd"
-							style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-							data-pen-title="XWrNqxd">
+			<!-- First nave menu modal -->
+			<div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				  aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">My first nav menu.</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result"
+								data-user="codecanna" data-slug-hash="XWrNqxd"
+								style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+								data-pen-title="XWrNqxd">
   <span>See the Pen <a href="https://codepen.io/codecanna/pen/XWrNqxd/">
   XWrNqxd</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
-						</p>
-						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</p>
+							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!-- CreateJS Clock Modal -->
-		<div class="modal fade" id="createClock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-			  aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">CreateJS Clock</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result"
-							data-user="codecanna" data-slug-hash="yLBVEJO"
-							style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-							data-pen-title="yLBVEJO">
+			<!-- CreateJS Clock Modal -->
+			<div class="modal fade" id="createClock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				  aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">CreateJS Clock</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!-- CreateJS Clock Codepen -->
+							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="codecanna" data-slug-hash="yLBVEJO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CreateJS Clock">
   <span>See the Pen <a href="https://codepen.io/codecanna/pen/yLBVEJO/">
-  yLBVEJO</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
+  CreateJS Clock</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
-						</p>
-						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Archlinux Installer Modal -->
-		<div class="modal fade" id="archInstaller" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-			  aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Archlinux Installer</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<h3>No Codepen Available Sorry!</h3>
-						<p>
-							Since this coding example is written in Bash and is written for a very specific purpose, there is
-							no codepen available for it. However please feel free to check out the code on GitHub, and try it
-							if you have a spare machine laying around that you wanna install Archlinux on.
-						</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Site content cards -->
-		<div id="github" class="container mt-5">
-			<div class="row">
-
-				<!-- Navmenu Example Card -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/nav.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This is the first nav menu I ever made. I used simple jquery, and lots of CSS to get this menu
-								to work the way I generally want.
 							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
-								Open Codepen Example
-							</button>
-							<br>
-							<a href="https://github.com/CodeCanna/MySite">Link to Example</a>
+							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 						</div>
-					</div>
-				</div>
-
-				<!-- CreateJS Clock example -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/clock.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This example showcases some fun I was having with a really cool JS library called CreateJS. It's
-								a simple clock.
-							</p>
-							<!-- Button trigger modal -->
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createClock">
-								Open Codepen Example
-							</button>
-							<br>
-							<a href="https://github.com/CodeCanna/Clock">Link to Example</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Archlinux Install Script example -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/coding.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This script installs Archlinux onto a computer taking user input for partitioning and
-								formatting. Written in Bash.
-							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#archInstaller">
-								Open Codepen Example
-							</button>
-							<br>
-							<a href="https://github.com/CodeCanna/super-duper-archey-installer">Link to Example</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- My Site Before Camp -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/bizz.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This simple site is my first full website I ever developed, I wrote everything and used Jquery only.
-							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal"
-									  data-target="#bizzSiteModal">
-								Open Site Deployment
-							</button>
-							<br>
-							<a href="https://github.com/CodeCanna/my_bizz">Link to Example</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- My ProDev Site -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/coding.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This site showcases my experience throughout the Deep Dive Coding Bootcamp.
-							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-								Open Site Deployment
-							</button>
-							<br>
-							<a href="#">Link to Example</a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Capstone Project -->
-				<div class="col mt-5">
-					<div class="card ml-auto mr-auto" style="width: 18rem;">
-						<img src="resources/images/coding.png" class="card-img-top" alt="...">
-						<div class="card-body">
-							<p class="card-text">
-								This is my main capstone project I completed while I went throught the bootcamp.  This project was a team effort.
-							</p>
-							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-								Open Site Deployment
-							</button>
-							<br>
-							<a href="#">Link to Example</a>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div><!-- Closes card container -->
 
-		<div class="container">
-
-		</div>
-		<!-- Jumbotron Start -->
-		<div class="container-fluid">
-
-		</div>
-
-		<!-- Form Modal -->
-		<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-			  aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Email Me!</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+			<!-- Archlinux Installer Modal -->
+			<div class="modal fade" id="archInstaller" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				  aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Archlinux Installer</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<h3>No Codepen Available Sorry!</h3>
+							<p>
+								Since this coding example is written in Bash and is written for a very specific purpose, there
+								is
+								no codepen available for it. However please feel free to check out the code on GitHub, and try
+								it
+								if you have a spare machine laying around that you wanna install Archlinux on.
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						</div>
 					</div>
-					<div class="modal-body">
-						<!-- FORM START -->
-						<div class="form-container text-white">
-							<form id="mailer-form" action="../php/index.php" method="post">
+				</div>
+			</div>
 
-								<!-- NAME -->
-								<div class="form-group">
-									<label for="name">Name<span>*</span></label>
-									<div class="input-group">
-										<div class="input-group-container">
-											<span class="h-100 input-group-text"></span>
-											<i class="fa fa-user" aria-hidden="true"></i>
+			<!-- Site content cards -->
+			<div id="github" class="container mt-5">
+				<div class="row">
+
+					<!-- Navmenu Example Card -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/nav.png" class="card-img-top" alt="...">
+							<div class="card-body pl-auto pr-auto">
+								<p class="card-text">
+									This is the first nav menu I ever made. I used simple jquery, and lots of CSS to get this
+									menu
+									to work the way I generally want.
+								</p>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
+									Open Codepen Example
+								</button>
+								<br>
+								<a href="https://github.com/CodeCanna/MySite">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+					<!-- CreateJS Clock example -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/clock.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">
+									This example showcases some fun I was having with a really cool JS library called CreateJS.
+									It's
+									a simple clock.
+								</p>
+								<!-- Button trigger modal -->
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createClock">
+									Open Codepen Example
+								</button>
+								<br>
+								<a href="https://github.com/CodeCanna/Clock">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+					<!-- Archlinux Install Script example -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/coding.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">
+									This script installs Archlinux onto a computer taking user input for partitioning and
+									formatting. Written in Bash.
+								</p>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#archInstaller">
+									Open Codepen Example
+								</button>
+								<br>
+								<a href="https://github.com/CodeCanna/super-duper-archey-installer">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- My Site Before Camp -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/bizz.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">
+									This simple site is my first full website I ever developed, I wrote everything and used
+									Jquery only.
+								</p>
+								<button type="button" class="btn btn-primary" data-toggle="modal"
+										  data-target="#bizzSiteModal">
+									Open Site Deployment
+								</button>
+								<br>
+								<a href="https://github.com/CodeCanna/my_bizz">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- My ProDev Site -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/coding.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">
+									This site showcases my experience throughout the Deep Dive Coding Bootcamp.
+								</p>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+									Open Site Deployment
+								</button>
+								<br>
+								<a href="#">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Capstone Project -->
+					<div class="col mt-5">
+						<div class="card ml-auto mr-auto" style="width: 18rem;">
+							<img src="resources/images/coding.png" class="card-img-top" alt="...">
+							<div class="card-body">
+								<p class="card-text">
+									This is my main capstone project I completed while I went throught the bootcamp. This project
+									was a team effort.
+								</p>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+									Open Site Deployment
+								</button>
+								<br>
+								<a href="#">Fork Me!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- Closes card container -->
+
+			<div class="container">
+
+			</div>
+			<!-- Jumbotron Start -->
+			<div class="container-fluid">
+
+			</div>
+
+			<!-- Form Modal -->
+			<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				  aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Email Me!</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<!-- FORM START -->
+							<div class="form-container text-white">
+								<form id="mailer-form" action="../php/index.php" method="post">
+
+									<!-- NAME -->
+									<div class="form-group">
+										<label for="name">Name<span>*</span></label>
+										<div class="input-group">
+											<div class="input-group-container">
+												<span class="h-100 input-group-text"></span>
+												<i class="fa fa-user" aria-hidden="true"></i>
+											</div>
+											<input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
 										</div>
-										<input type="text" class="form-control" id="name" name="name" placeholder="Name"/>
 									</div>
-								</div>
 
-								<!-- SUBJECT -->
-								<div class="form-group">
-									<label for="subject">Subject</label>
-									<div class="input-group">
-										<div class="input-group-container">
-											<span class="h-100 input-group-text"></span>
-											<i class="fa fa-pencil" aria-hidden="true"></i>
+									<!-- SUBJECT -->
+									<div class="form-group">
+										<label for="subject">Subject</label>
+										<div class="input-group">
+											<div class="input-group-container">
+												<span class="h-100 input-group-text"></span>
+												<i class="fa fa-pencil" aria-hidden="true"></i>
+											</div>
+											<input type="text" class="form-control" id="subject" name="subject"
+													 placeholder="Subject"/>
 										</div>
-										<input type="text" class="form-control" id="subject" name="subject"
-												 placeholder="Subject"/>
 									</div>
-								</div>
 
-								<!-- EMAIL -->
-								<div class="form-group">
-									<label for="email">Email<span>*</span></label>
-									<div class="input-group">
-										<div class="input-group-container">
-											<span class="h-100 input-group-text"></span>
-											<i class="fa fa-envelope" aria-hidden="true"></i>
+									<!-- EMAIL -->
+									<div class="form-group">
+										<label for="email">Email<span>*</span></label>
+										<div class="input-group">
+											<div class="input-group-container">
+												<span class="h-100 input-group-text"></span>
+												<i class="fa fa-envelope" aria-hidden="true"></i>
+											</div>
+											<input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
 										</div>
-										<input type="email" class="form-control" id="email" name="email" placeholder="Email"/>
 									</div>
-								</div>
 
-								<!-- MESSAGE TO BE SENT -->
-								<div class="form-group">
-									<label for="message">Message<span>*</span></label>
-									<div class="input-group">
-										<div class="input-group-container">
-											<span class="h-100 input-group-text"></span>
-											<i class="fa fa-comment" aria-hidden="true"></i>
+									<!-- MESSAGE TO BE SENT -->
+									<div class="form-group">
+										<label for="message">Message<span>*</span></label>
+										<div class="input-group">
+											<div class="input-group-container">
+												<span class="h-100 input-group-text"></span>
+												<i class="fa fa-comment" aria-hidden="true"></i>
+											</div>
+											<textarea class="form-control" rows="5" id="message" name="message"
+														 placeholder="Message (2000 characters max)"></textarea>
 										</div>
-										<textarea class="form-control" rows="5" id="message" name="message"
-													 placeholder="Message (2000 characters max)"></textarea>
 									</div>
-								</div>
 
-								<!-- REEEEEEEECAPTCHAAAAAAAAAA -->
-								<div class="g-recaptcha" data-sitekey="6LdqCrMUAAAAAAkQltSkr47w13iABQvsq6uM22a5"></div>
-								<div class="modal-footer">
-									<button id="submit" class="btn btn-success" type="submit"><i class="fa fa-paper"></i>Send
-									</button>
-									<button id="reset" class="btn btn-warning" type="reset"><i class="fa fa-ban"></i>Reset
-									</button>
-								</div>
-							</form>
+									<!-- REEEEEEEECAPTCHAAAAAAAAAA -->
+									<div class="g-recaptcha" data-sitekey="6LdqCrMUAAAAAAkQltSkr47w13iABQvsq6uM22a5"></div>
+									<div class="modal-footer">
+										<button id="submit" class="btn btn-success" type="submit"><i class="fa fa-paper"></i>Send
+										</button>
+										<button id="reset" class="btn btn-warning" type="reset"><i class="fa fa-ban"></i>Reset
+										</button>
+									</div>
+								</form>
 
-							<!--empty area for form error/success output-->
-							<div class="row">
-								<div class="col-xs-12">
-									<div id="output-area"></div>
+								<!--empty area for form error/success output-->
+								<div class="row">
+									<div class="col-xs-12">
+										<div id="output-area"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -425,14 +408,14 @@
 		<!-- FOOTER START -->
 		<div class="m-0 p-0 container-fluid">
 			<footer class="mt-1 w-100">
-				<div class="bg-light w-100">
+				<div id="footer-div" class="bg-light w-100 ml-auto mr-auto">
 					<div class="m-0 row p-2">
 						<div class="col-sm">
 							<a href="https://github.com/CodeCanna">GitHub</a>
 						</div>
 
 						<div class="col-sm">
-							<a href="#">Resume</a>
+							<a href="#" data-toggle="modal" data-target="#resume-modal">Resume</a>
 						</div>
 
 						<div class="col-sm">
@@ -455,5 +438,18 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 				  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 				  crossorigin="anonymous"></script>
+
+		<!-- jQuery Form, Additional Methods, Validate -->
+		<script type="text/javascript"
+				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+		<script type="text/javascript"
+				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+		<script type="text/javascript"
+				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+		<!-- Your JavaScript Form Validator -->
+		<script src="public_html/js/form-validate.js"></script>
+
+		<script src="js/index.js"></script>
 	</body>
 </html>

@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function(){
 
 	/**
@@ -75,5 +76,10 @@ $(document).ready(function(){
 		}
 
 	});/* end validate function here */
+
+	// Autoclose Nav
+	$('.navbar-nav>li>a').on('click', function(){
+		$('.navbar-collapse').collapse('hide');
+	});
 
 });/*end document.ready()*/

@@ -1,4 +1,19 @@
+body {
+	width: 100%;
+	background-image:url('../resources/images/background.jpg');
+	background-repeat:repeat-y;
+	background-attachment: fixed;
+}
+
+div.opacity {
+	opacity: 0.7;
+}
+
 .g-recaptcha {
 	padding-left: auto;
 	padding-right: auto;
+}
+
+div#footer-div {
+	text-align: center;
 }
