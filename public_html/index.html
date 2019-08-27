@@ -24,6 +24,9 @@
 		<!-- Main JS File -->
 		<script src="js/index.js"></script>
 
+		<!-- Event Handler -->
+		<script src="js/event_handler.js" type="text/javascript"></script>
+
 		<!-- Google reCAPTCHA -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
@@ -104,7 +107,7 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLongTitle">My Resume</h5>
+							<h5 class="modal-title" id="resumeModalTitle">My Resume</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -130,8 +133,8 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">My first nav menu.</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<h5 class="modal-title" id="navModalLabel">My first nav menu.</h5>
+							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
@@ -147,7 +150,7 @@
 							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
@@ -159,8 +162,8 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">CreateJS Clock</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<h5 class="modal-title" id="createJsModal">CreateJS Clock</h5>
+							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
@@ -174,7 +177,7 @@
 							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
@@ -186,23 +189,19 @@
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Archlinux Installer</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<h5 class="modal-title" id="archLinuxInstallModal">Links to Bash Scripts</h5>
+							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
 						</div>
 						<div class="modal-body">
-							<h3>No Codepen Available Sorry!</h3>
-							<p>
-								Since this coding example is written in Bash and is written for a very specific purpose, there
-								is
-								no codepen available for it. However please feel free to check out the code on GitHub, and try
-								it
-								if you have a spare machine laying around that you wanna install Archlinux on.
-							</p>
+							<div class="text-center">
+								<a href="https://github.com/atar-axis/xpadneo/pull/82"><button class="mb-3 btn btn-primary">Xpadneo Driver Config Script</button></a>
+								<a href="https://github.com/CodeCanna/super-duper-archey-installer"><button class="btn btn-primary">Archlinux Install Script</button></a>
+							</div>
 						</div>
 						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
@@ -215,17 +214,19 @@
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
 							<img src="resources/images/nav.png" class="card-img-top" alt="...">
-							<div class="card-body pl-auto pr-auto">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This is the first nav menu I ever made. I used simple jquery, and lots of CSS to get this
 									menu
 									to work the way I generally want.
 								</p>
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
+								<button type="button" class="center-block card-button btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
 									Open Codepen Example
 								</button>
 								<br>
-								<a href="https://github.com/CodeCanna/MySite">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a class="mt-3" href="https://github.com/CodeCanna/MySite">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -233,7 +234,7 @@
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
 							<img src="resources/images/clock.png" class="card-img-top" alt="...">
-							<div class="card-body">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This example showcases some fun I was having with a really cool JS library called CreateJS.
 									It's
@@ -244,24 +245,27 @@
 									Open Codepen Example
 								</button>
 								<br>
-								<a href="https://github.com/CodeCanna/Clock">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a href="https://github.com/CodeCanna/Clock">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Archlinux Install Script example -->
+					<!-- Bash Scripts example -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/coding.png" class="card-img-top" alt="...">
-							<div class="card-body">
+							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286.4" height="161.1">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
-									This script installs Archlinux onto a computer taking user input for partitioning and
-									formatting. Written in Bash.
+									This links to my GitHub bash scripts.  Since these are bash there is no modal. Sorry about.
 								</p>
 								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#archInstaller">
 									Open Codepen Example
 								</button>
 								<br>
-								<a href="https://github.com/CodeCanna/super-duper-archey-installer">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a href="https://github.com/CodeCanna/super-duper-archey-installer">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -270,7 +274,7 @@
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
 							<img src="resources/images/bizz.png" class="card-img-top" alt="...">
-							<div class="card-body">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This simple site is my first full website I ever developed, I wrote everything and used
 									Jquery only.
@@ -280,7 +284,9 @@
 									Open Site Deployment
 								</button>
 								<br>
-								<a href="https://github.com/CodeCanna/my_bizz">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a href="https://github.com/CodeCanna/my_bizz">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -289,7 +295,7 @@
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
 							<img src="resources/images/coding.png" class="card-img-top" alt="...">
-							<div class="card-body">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This site showcases my experience throughout the Deep Dive Coding Bootcamp.
 								</p>
@@ -297,7 +303,9 @@
 									Open Site Deployment
 								</button>
 								<br>
-								<a href="#">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a href="#">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -305,17 +313,18 @@
 					<!-- Capstone Project -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/coding.png" class="card-img-top" alt="...">
-							<div class="card-body">
+							<img src="resources/images/coding.png" class="border card-img-top" alt="...">
+							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
-									This is my main capstone project I completed while I went throught the bootcamp. This project
-									was a team effort.
+									This is my main capstone project I completed while I went throught the bootcamp.
 								</p>
 								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 									Open Site Deployment
 								</button>
 								<br>
-								<a href="#">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a href="#">Fork Me!</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -442,7 +451,6 @@
 						</div>
 					</div>
 				</div>
-				<img src="resources/images/mobile-card-button-image.jpg" width="100" height="100" alt="This damn image better show up"/>
 			</footer>
 		</div>
 		<!-- jQuery Form, Additional Methods, Validate -->
