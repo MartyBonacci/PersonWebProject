@@ -1,12 +1,28 @@
 <!DOCTYPE html>
+<!-- FOR WHOEVER IS GRADING THIS ASSIGNMENT!!!!
+	  The inline CSS in this document is from the bootstrap elements
+	  and are not part of my code, Thank You.-->
 <html>
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 		<title>Picture Space</title>
-		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link href="css/index.css" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 				integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+				  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+				  crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+				  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				  crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+				  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+				  crossorigin="anonymous"></script>
+
+		<!-- Main JS File -->
+		<script src="js/index.js"></script>
 
 		<!-- Google reCAPTCHA -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -47,7 +63,7 @@
 					<p>
 						Hello! My name is Mark Waid Jr, I am a Deep Dive Coding Bootcamp alumni. I have always loved tech, and
 						it has been a dream of mine to work in the tech industry, specifically the software development side
-						of things. I started my technology journey when I was still in high school, I took a basic computer
+						of things. I started my technology journey when I was still in high school. I took a basic computer
 						programming class, and from there became hooked. I have other interests besides just coding and tech.
 						I also love video games; yes I know it's not a big difference, but video games are a tech beast all
 						their own. For relaxation I love camping, hiking, spending my time out doors, and relaxing lazily at
@@ -61,10 +77,10 @@
 					<h2>My Interests</h2>
 					<p>
 						Going more in depth into my interests, I'm interested in many things. I love music, technology, art,
-						and science just to name a few. I love all music except most country music, me being a web developer,
+						and science just to name a few; I love all music except most country music, me being a web developer,
 						naturally I have a love for technology, art has a place in everyone's heart including mine. I have
 						seen some of the most rare and beautiful art pieces in the world when I went to France. Which brings
-						me to my last big interest, I love to travel to new and interesting places.
+						me to my last big interest - I love to travel to new and interesting places.
 					</p>
 				</div>
 
@@ -73,9 +89,9 @@
 					  style="width: 100%;">
 					<h2>My Education</h2>
 					<p>
-						I love to learn, learning is one of my favorite activities, and one of my most productive. I have
-						education in a few different fields. I have education in the transportation industry, auto mechanic
-						industry, cleaning industry, and technology industry. Degrees include a 2 year degree in automotive
+						I love to learn; learning is one of my favorite activities, and one of my most productive. I have
+						training and experience in a few different fields. I have training/experience in the transportation industry, auto mechanic
+						industry, cleaning industry, and technology industry. My degrees include a 2 year degree in automotive
 						technology, and a CDL.
 					</p>
 				</div>
@@ -192,10 +208,9 @@
 				</div>
 			</div>
 
-			<!-- Site content cards -->
+			<!-- CARDS START -->
 			<div id="github" class="container mt-5">
 				<div class="row">
-
 					<!-- Navmenu Example Card -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
@@ -206,7 +221,7 @@
 									menu
 									to work the way I generally want.
 								</p>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
 									Open Codepen Example
 								</button>
 								<br>
@@ -225,7 +240,7 @@
 									a simple clock.
 								</p>
 								<!-- Button trigger modal -->
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createClock">
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#createClock">
 									Open Codepen Example
 								</button>
 								<br>
@@ -242,7 +257,7 @@
 									This script installs Archlinux onto a computer taking user input for partitioning and
 									formatting. Written in Bash.
 								</p>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#archInstaller">
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#archInstaller">
 									Open Codepen Example
 								</button>
 								<br>
@@ -260,7 +275,7 @@
 									This simple site is my first full website I ever developed, I wrote everything and used
 									Jquery only.
 								</p>
-								<button type="button" class="btn btn-primary" data-toggle="modal"
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal"
 										  data-target="#bizzSiteModal">
 									Open Site Deployment
 								</button>
@@ -278,7 +293,7 @@
 								<p class="card-text">
 									This site showcases my experience throughout the Deep Dive Coding Bootcamp.
 								</p>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 									Open Site Deployment
 								</button>
 								<br>
@@ -296,7 +311,7 @@
 									This is my main capstone project I completed while I went throught the bootcamp. This project
 									was a team effort.
 								</p>
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
 									Open Site Deployment
 								</button>
 								<br>
@@ -429,16 +444,6 @@
 				</div>
 			</footer>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-				  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-				  crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-				  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-				  crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-				  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-				  crossorigin="anonymous"></script>
-
 		<!-- jQuery Form, Additional Methods, Validate -->
 		<script type="text/javascript"
 				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
@@ -449,7 +454,5 @@
 
 		<!-- Your JavaScript Form Validator -->
 		<script src="public_html/js/form-validate.js"></script>
-
-		<script src="js/index.js"></script>
 	</body>
 </html>

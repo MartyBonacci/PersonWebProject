@@ -1,5 +1,5 @@
 "use strict";
-$(document).ready(function(){
+$(document).ready(function() {
 
 	/**
 	 * jQuery Validate Function
@@ -77,9 +77,34 @@ $(document).ready(function(){
 
 	});/* end validate function here */
 
-	// Autoclose Nav
-	$('.navbar-nav>li>a').on('click', function(){
+	/* My javascript */
+
+	// Auto-close Nav
+	$('body').on('click', function() {
 		$('.navbar-collapse').collapse('hide');
 	});
 
+	// Change card button text to icon at specified screen size
+	let cardButtons = document.getElementsByClassName('card-button');
+
+	for(let i = 0; i < cardButtons.length; i++) {
+		if(window.innerWidth <= 768 && window.innerHeight <= 1024) {
+			cardButtons[i].innerHTML = "";
+		}
+
+		let icon = document.createElement("img");
+		icon.src = "../resources/images/mobile-card-button-image.jpg";
+
+		cardButtons[i].insertAdjacentElement('afterbegin', icon);
+	}
+
+
+
+	/*
+	window.addEventListener("resize", function(event) {
+		if(window.innerWidth <= 768) {
+			cardButtons.innerHTML = "";
+		}
+	})
+	 */
 });/*end document.ready()*/
