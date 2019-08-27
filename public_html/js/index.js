@@ -75,9 +75,9 @@ $(document).ready(function() {
 			})
 		}
 
-	});/* end validate function here */
+	});/* end validate function here AND end school guided code */
 
-	/* My javascript */
+	/* My javascript start */
 
 	// Auto-close Nav
 	$('body').on('click', function() {
@@ -87,42 +87,35 @@ $(document).ready(function() {
 	// Change card button text to icon at specified screen size
 	let cardButtons = document.getElementsByClassName('card-button');
 
+	// Create an icon image element
+
+
 	for(let i = 0; i < cardButtons.length; i++) {
 		if(window.innerWidth <= 768 && window.innerHeight <= 1024) {
 			cardButtons[i].innerHTML = "";
+
+			cardButtons[i].addEventListener("click", (event) => {
+				cardButtons[i].style.webkitTransform = 'rotate(180deg)';
+				cardButtons[i].style.mozTransform    = 'rotate(180deg)';
+				cardButtons[i].style.msTransform     = 'rotate(180deg)';
+				cardButtons[i].style.oTransform      = 'rotate(180deg)';
+				cardButtons[i].style.transform       = 'rotate(180deg)';
+			});
+
+			let icon = {
+				element: document.createElement('img'),
+				src: "resources/images/mobile-card-button-image.png",
+				width: 25,
+				height: 25,
+				setup: function() {
+					this.element.src = this.src;
+					this.element.width = this.width;
+					this.element.height = this.height;
+					return this.element;
+				}
+			};
+
+			cardButtons[i].insertAdjacentElement('afterbegin', icon.setup());
 		}
-
-		// Create an icon image element
-		let icon = {
-			element: document.createElement('img'),
-			src: "../resources/images/mobile-card-button-image.png",
-			width: 25,
-			height: 25,
-			setup: function() {
-				this.element.src = this.src;
-				this.element.width = this.width;
-				this.element.height = this.height;
-				return this.element;
-			}
-		};
-
-		/*
-		icon.element.width = icon.width;
-		icon.element.height = icon.height;
-		icon.element.src = icon.src;
-		*/
-
-
-		cardButtons[i].insertAdjacentElement('afterbegin', icon.setup());
 	}// End for loop
-
-
-
-	/*
-	window.addEventListener("resize", function(event) {
-		if(window.innerWidth <= 768) {
-			cardButtons.innerHTML = "";
-		}
-	})
-	 */
 });/*end document.ready()*/
