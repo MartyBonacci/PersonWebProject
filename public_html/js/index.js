@@ -92,11 +92,29 @@ $(document).ready(function() {
 			cardButtons[i].innerHTML = "";
 		}
 
-		let icon = document.createElement("img");
-		icon.src = "../resources/images/mobile-card-button-image.jpg";
+		// Create an icon image element
+		let icon = {
+			element: document.createElement('img'),
+			src: "../resources/images/mobile-card-button-image.png",
+			width: 25,
+			height: 25,
+			setup: function() {
+				this.element.src = this.src;
+				this.element.width = this.width;
+				this.element.height = this.height;
+				return this.element;
+			}
+		};
 
-		cardButtons[i].insertAdjacentElement('afterbegin', icon);
-	}
+		/*
+		icon.element.width = icon.width;
+		icon.element.height = icon.height;
+		icon.element.src = icon.src;
+		*/
+
+
+		cardButtons[i].insertAdjacentElement('afterbegin', icon.setup());
+	}// End for loop
 
 
 
