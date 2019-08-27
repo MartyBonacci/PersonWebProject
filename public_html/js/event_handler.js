@@ -1,4 +1,4 @@
-/* This JavaScript file handles the events in the DOM */
+/* This JavaScript file handles the menu and button events in the DOM */
 
 window.onload = function() {
 	// Auto-close Nav
@@ -6,7 +6,7 @@ window.onload = function() {
 		$('.navbar-collapse').collapse('hide');
 	});
 
-	// Grab card modal triggering buttons
+	// Grab modal triggering buttons
 	let cardButtons = document.getElementsByClassName('card-button');
 
 	// Grab modal closing buttons
@@ -17,19 +17,15 @@ window.onload = function() {
 	for(let i = 0; i < modalCloseButtons.length; i++) {
 		modalCloseButtons[i].addEventListener("click", () => {
 			// Rotate icon back to normal state
-			cardButtons[i].style.webkitTransform = 'rotate(0deg)';
 			cardButtons[i].style.mozTransform = 'rotate(0deg)';
 			cardButtons[i].style.msTransform = 'rotate(0deg)';
 			cardButtons[i].style.oTransform = 'rotate(0deg)';
 			cardButtons[i].style.transform = 'rotate(0deg)';
-
-			console.log("Modal Close..............");
 		});
 
 		// Add event listeners to modal close secondary buttons
 		for(let i = 0; i < modalCloseSecondary.length; i++) {
 			modalCloseSecondary[i].addEventListener("click", () => {
-				cardButtons[i].style.webkitTransform = 'rotate(0deg)';
 				cardButtons[i].style.mozTransform = 'rotate(0deg)';
 				cardButtons[i].style.msTransform = 'rotate(0deg)';
 				cardButtons[i].style.oTransform = 'rotate(0deg)';
@@ -61,8 +57,9 @@ window.onload = function() {
 				class: "card-icon",
 				src: "resources/images/mobile-card-button-image.png",
 				width: 50,
-				height: 50,
+				height: 60,
 				setup: function() {
+					// Set card properties
 					this.element.src = this.src;
 					this.element.className = this.id;
 					this.element.width = this.width;
