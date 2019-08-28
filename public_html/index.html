@@ -38,8 +38,10 @@
 		<!-- Form Validator File -->
 		<script src="js/index.js"></script>
 
-		<!-- Event Handler -->
+		<!-- Event Handlers -->
+		<script src="js/textCardClickHandler.js"></script>
 		<script src="js/event_handler.js" type="text/javascript"></script>
+
 
 		<!-- Google reCAPTCHA -->
 		<script src='https://www.google.com/recaptcha/api.js'></script>
@@ -54,15 +56,15 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#about-me">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#me">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#github">GitHub</a>
 					</li>
-					<li>
+					<li class="nav-item">
 						<a class="nav-link" href="#" data-toggle="modal" data-target="#resume-modal">Resume</a>
 					</li>
-					<li>
+					<li class="nav-item">
 						<!-- Trigger Email Me Modal -->
 						<a href="#" data-toggle="modal" data-target="#form-modal" class="nav-link">Email Me!</a>
 					</li>
@@ -71,63 +73,112 @@
 		</nav><!-- NAV END -->
 
 		<!-- Main Feature Jumbotron -->
-		<div id="me-jumbo" class="jumbotron jumbotron-fluid">
+		<div id="me" class="ml-auto mr-auto mb-0 mt-5 jumbotron conatiner-fluid jumbotron-fluid">
 			<div class="container">
-				<img src="resources/images/me.jpg" alt="Me"/>
-				<h1 class="display-4">Mark Waid Jr</h1>
-				<p class="lead">Hello World!  I am an aspiring web developer.</p>
+				<div class="row">
+					<div class="mr-5 col-sm-2">
+						<img id="me-pic" class="rounded-circle" src="resources/images/me.jpg" alt="Me"/>
+					</div>
+					<!-- Jumbotron content container -->
+					<div class="pt-auto pb-auto text-center rounded-pill me-info bg-light col-lg">
+						<div class="mt-5 mb-auto">
+							<h1 class="display-4">Mark Waid Jr</h1>
+							<p class="my-auto lead">Hello World! I am an enthusiastic web developer.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="container mt-5">
-			<div class="row ">
+		<div class="container-fluid mt-5">
+			<div id="text-menu" class="row">
 				<!-- About Me -->
 				<div id="about-me"
-					  class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
-					  style="width: 100%;">
-					<h2>About Me</h2>
-					<img src="resources/images/coding.png" width="100" height="100" alt="Me"/>
-					<p>
-						Hello! My name is Mark Waid Jr, I am a Deep Dive Coding Bootcamp alumni. I have always loved tech, and
-						it has been a dream of mine to work in the tech industry, specifically the software development side
-						of things. I started my technology journey when I was still in high school. I took a basic computer
-						programming class, and from there became hooked. I have other interests besides just coding and tech.
-						I also love video games; yes I know it's not a big difference, but video games are a tech beast all
-						their own. For relaxation I love camping, hiking, spending my time out doors, and relaxing lazily at
-						home. Thanks for taking the time to read about me, I hope you enjoy looking at the rest of my site.
-					</p>
+					  class="text-card text-wrap ml-auto mr-auto p-3 bg-light opacity"
+					  style="width: 100%;" data-toggle="collapse" data-target="#about-me-content">
+					<div class="row">
+						<div class="col-sm">
+							<p class="text-menu-icon hover-rotate open">&#10148;</p>
+						</div>
+
+						<div class="col-sm">
+							<h2 class="text-center">About Me</h2>
+						</div>
+						<div class="col-sm"></div>
+					</div>
+					<div id="about-me-content" class="collapse text-card-content">
+						<p>
+							Hello! My name is Mark Waid Jr, I am a Deep Dive Coding Bootcamp alumni. I have always loved tech,
+							and
+							it has been a dream of mine to work in the tech industry, specifically the software development
+							side
+							of things. I started my technology journey when I was still in high school. I took a basic computer
+							programming class, and from there became hooked. I have other interests besides just coding and
+							tech.
+							I also love video games; yes I know it's not a big difference, but video games are a tech beast all
+							their own. For relaxation I love camping, hiking, spending my time out doors, and relaxing lazily
+							at
+							home. Thanks for taking the time to read about me, I hope you enjoy looking at the rest of my site.
+						</p>
+					</div>
 				</div>
 
 				<!-- My interests -->
-				<div id="my-interests" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
-					  style="width: 100%;">
-					<h2>My Interests</h2>
-					<p>
-						Going more in depth into my interests, I'm interested in many things. I love music, technology, art,
-						and science just to name a few; I love all music except most country music, me being a web developer,
-						naturally I have a love for technology, art has a place in everyone's heart including mine. I have
-						seen some of the most rare and beautiful art pieces in the world when I went to France. Which brings
-						me to my last big interest - I love to travel to new and interesting places.
-					</p>
+				<div id="my-interests" class="text-card text-wrap ml-auto mr-auto p-3 bg-light opacity"
+					  style="width: 100%;" data-toggle="collapse" data-target="#interests-content">
+					<div class="row">
+						<div class="col-sm">
+							<p class="text-menu-icon hover-rotate">&#10148;</p>
+						</div>
+
+						<div class="col-sm">
+							<h2 class="text-center">My Interests</h2>
+						</div>
+						<div class="col-sm"></div>
+					</div>
+					<div id="interests-content" class="collapse text-card-content">
+						<p>
+							Going more in depth into my interests, I'm interested in many things. I love music, technology,
+							art,
+							and science just to name a few; I love all music except most country music, me being a web
+							developer,
+							naturally I have a love for technology, art has a place in everyone's heart including mine. I have
+							seen some of the most rare and beautiful art pieces in the world when I went to France. Which
+							brings
+							me to my last big interest - I love to travel to new and interesting places.
+						</p>
+					</div>
 				</div>
 
 				<!-- My education -->
-				<div id="my-education" class="border rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
-					  style="width: 100%;">
-					<h2>My Education</h2>
-					<p>
-						I love to learn; learning is one of my favorite activities, and one of my most productive. I have
-						training and experience in a few different fields. I have training/experience in the transportation
-						industry, auto mechanic
-						industry, cleaning industry, and technology industry. My degrees include a 2 year degree in automotive
-						technology, and a CDL.
-					</p>
+				<div id="my-education" class="text-card text-wrap ml-auto mr-auto p-3 bg-light opacity"
+					  style="width: 100%;" data-toggle="collapse" data-target="#edu-content">
+					<div class="row">
+						<div class="col-sm">
+							<p class="text-menu-icon hover-rotate">&#10148;</p>
+						</div>
+
+						<div class="col-sm">
+							<h2 class="text-center">My Education</h2>
+						</div>
+						<div class="col-sm"></div>
+					</div>
+					<div id="edu-content" class="collapse text-card-content">
+						<p>
+							I love to learn; learning is one of my favorite activities, and one of my most productive. I have
+							training and experience in a few different fields. I have training/experience in the transportation
+							industry, auto mechanic
+							industry, cleaning industry, and technology industry. My degrees include a 2 year degree in
+							automotive
+							technology, and a CDL.
+						</p>
+					</div>
 				</div>
 			</div>
 
 
 			<!-- MODAL FOR RESUME -->
-			<div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+			<div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="resumeModalTitle"
 				  aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -142,106 +193,17 @@
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<a href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank">
-								<button type="button" class="btn btn-primary">Save Resume</button>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- MODALS FOR THE CARDS -->
-
-			<!-- First nave menu modal -->
-			<div class="modal fade" id="navMenuModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-				  aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="navModalLabel">My first nav menu.</h5>
-							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
+							<button type="button" class="btn btn-primary"><a
+								href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank">Save Resume</a>
 							</button>
 						</div>
-						<div class="modal-body">
-							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result"
-								data-user="codecanna" data-slug-hash="XWrNqxd"
-								style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-								data-pen-title="XWrNqxd">
-  <span>See the Pen <a href="https://codepen.io/codecanna/pen/XWrNqxd/">
-  XWrNqxd</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-							</p>
-							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- CreateJS Clock Modal -->
-			<div class="modal fade" id="createClock" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-				  aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="createJsModal">CreateJS Clock</h5>
-							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<!-- CreateJS Clock Codepen -->
-							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result"
-								data-user="codecanna" data-slug-hash="yLBVEJO"
-								style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-								data-pen-title="CreateJS Clock">
-  <span>See the Pen <a href="https://codepen.io/codecanna/pen/yLBVEJO/">
-  CreateJS Clock</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-							</p>
-							<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
+			<!-- CARDS START -->
 
-			<!-- Archlinux Installer Modal -->
-			<div class="modal fade" id="archInstaller" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-				  aria-hidden="true">
-				<div class="modal-dialog" role="document">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="archLinuxInstallModal">Links to Bash Scripts</h5>
-							<button type="button" class="modal-close-secondary close" data-dismiss="modal" aria-label="Close">
-								<span aria-hidden="true">&times;</span>
-							</button>
-						</div>
-						<div class="modal-body">
-							<div class="text-center">
-								<a href="https://github.com/atar-axis/xpadneo/pull/82">
-									<button class="mb-3 btn btn-primary">Xpadneo Driver Config Script</button>
-								</a>
-								<a href="https://github.com/CodeCanna/super-duper-archey-installer">
-									<button class="btn btn-primary">Archlinux Install Script</button>
-								</a>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="modal-close btn btn-secondary" data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-
-<!-- CARDS START -->
-
-			<div id="github" class="container mt-5">
+			<div id="github" class="container-fluid mt-5">
 				<div class="row">
 					<!-- Navmenu Example Card -->
 					<div class="col mt-5">
@@ -253,13 +215,14 @@
 									menu
 									to work the way I generally want.
 								</p>
-								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
+								<button type="button" class="pen-button pt-4 pb-4 ex-modal-trigger card-button btn btn-primary"
+										  data-toggle="modal"
 										  data-target="#navMenuModal">
-									Open Codepen Example
+									TRY ME!
 								</button>
 								<br>
 								<div class="mt-3 mb-2">
-									<a class="mt-3" href="https://github.com/CodeCanna/MySite"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
+									<a class="mt-3" href="https://github.com/CodeCanna/MySite"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png" alt="GitHub Image"></a>
 								</div>
 							</div>
 						</div>
@@ -276,13 +239,16 @@
 									a simple clock.
 								</p>
 								<!-- Button for CreateJS Clock Example Modal -->
-								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
+								<button type="button" class="pen-button pt-4 pb-4 ex-modal-trigger card-button btn btn-primary"
+										  data-toggle="modal"
 										  data-target="#createClock">
-									Open Codepen Example
+									TRY ME!
 								</button>
 								<br>
 								<div class="mt-3 mb-2 mb-2">
-									<a href="https://github.com/CodeCanna/Clock"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
+									<a href="https://github.com/CodeCanna/Clock"><img class="hover_rotate"
+																									  src="https://img.icons8.com/color/48/000000/github-2.png"
+																									  alt="GitHub Image"></a>
 								</div>
 							</div>
 						</div>
@@ -293,20 +259,18 @@
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
 							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286.4"
 								  height="161.1">
-							<div class="text-center card-body pl-auto pr-auto">
-								<p class="card-text">
+							<div class="text-center card-body pl-auto pr-auto pb-1">
+								<p class="mb-5 card-text">
 									This links to my GitHub bash scripts. They are two bash scripts I wrote many years ago, and
 									helped me get where I am today.
 								</p>
-								<!-- Bash Script Modal Trigger Button -->
-								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
-										  data-target="#archInstaller">
-									Open Codepen Example
-								</button>
 								<br>
-								<div class="mt-3 mb-2">
-									<img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png">
+								<br>
+								<div class="mt-2">
+									<img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
+										  alt="GitHub Image">
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
@@ -321,7 +285,9 @@
 									Jquery only.
 								</p>
 								<div class="mt-3 mb-3">
-									<a href="https://github.com/CodeCanna/my_bizz"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
+									<a href="https://github.com/CodeCanna/my_bizz"><img class="hover_rotate"
+																										 src="https://img.icons8.com/color/48/000000/github-2.png"
+																										 alt="GitHub Image"></a>
 								</div>
 								<br>
 							</div>
@@ -338,7 +304,8 @@
 									experience.
 								</p>
 								<div class="mb-2 mt-2">
-									<a href="#"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
+									<a href="#"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
+														  alt="GitHub Image"></a>
 								</div>
 								<br>
 							</div>
@@ -355,7 +322,8 @@
 									Birbs.
 								</p>
 								<div class="mt-2 mb-1">
-									<a href="#"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
+									<a href="#"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
+														  alt="GitHub Image"></a>
 								</div>
 								<br>
 							</div>
@@ -458,7 +426,7 @@
 		<div class="m-0 p-0 container-fluid">
 			<footer class="mt-1 w-100">
 				<div id="footer-div" class="bg-light w-100 ml-auto mr-auto">
-					<div class="m-0 row p-2">
+					<div id="footer" class="m-0 row p-2">
 						<div class="col-sm">
 							<a href="https://github.com/CodeCanna">GitHub</a>
 						</div>

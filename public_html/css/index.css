@@ -1,79 +1,152 @@
 body {
 	width: 100%;
+	margin-top: 13rem;
 	background-image:url('../resources/images/background.jpg');
 	background-repeat:repeat-y;
 	background-attachment: fixed;
 	-webkit-background-size: auto;
 }
 
+/* Navbar */
 nav.navbar {
 	background-image: linear-gradient(to right, #455a64, #999988) !important;
-	padding: 0px !important;
+	box-shadow: 10px 1px 5px 10px #8eb9c3;
 }
 
-a.nav-link {
-	margin-top: 5% !important;
-	margin-bottom: 5% !important;
-
-}
-
-a.nav-link:hover {
-	background-color: #999988!important;
+li.nav-item:hover {
+	background-color: #999988 !important;
 	-webkit-border-radius: 5%;
 	-moz-border-radius: 5%;
 	border-radius: 5%;
 }
 
-div#me-jumbo {
-	background-image: linear-gradient(to right, #455a64, #999988) !important;
+/* Jumbotron */
+div#me {
+	/*background-image: linear-gradient(to right, #455a64, #999988) !important; */
+	background-image: url("../resources/images/jumbo-back.jpg");
+	background-repeat: no-repeat;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+img#me-pic {
+	border: solid white 0.5rem !important;
+}
+
+.me-info {
+	opacity: 0.7;
+}
+
+/* Paragraphs */
+div#text-menu:hover {
+	cursor: pointer;
+}
+
+p.text-menu-icon {
+	position: absolute;
+}
+
+div.text-card {
+	border-bottom: solid black 1px;
+}
+
+div.text-card:hover {
+	background-color: #999988 !important;
+}
+
+div.text-card:first-child {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+div.text-card:nth-child(3) {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
 }
 
 div.opacity {
 	opacity: 0.7;
 }
 
+/* Menu Icon State Classes */
+p.text-menu-icon.hover_rotate {
+	position: absolute;
+	-webkit-transform: rotate(0deg) !important;
+	-moz-transform: rotate(0deg) !important;
+	-o-transform: rotate(0deg) !important;
+	transform: rotate(0deg) !important;
+	-webkit-transition-duration: 1s !important;
+	-moz-transition-duration: 1s !important;
+	-o-transition-duration: 1s !important;
+	transition-duration: 1s !important;
+}
+
+p.text-menu-icon.hover_rotate.open {
+	position: absolute;
+	-webkit-transform: rotate(90deg) !important;
+	-moz-transform: rotate(90deg) !important;
+	-o-transform: rotate(90deg) !important;
+	transform: rotate(90deg) !important;
+	-webkit-transition-duration: 1s !important;
+	-moz-transition-duration: 1s !important;
+	-o-transition-duration: 1s !important;
+	transition-duration: 1s !important;
+}
+
+.hover_rotate {
+	-webkit-transform: rotate(0deg) !important;
+	-moz-transform: rotate(0deg) !important;
+	-o-transform: rotate(0deg) !important;
+	transform: rotate(0deg) !important;
+	-webkit-transition-duration: 1s !important;
+	-moz-transition-duration: 1s !important;
+	-o-transition-duration: 1s !important;
+	transition-duration: 1s !important;
+}
+
+.hover_rotate:hover {
+	-webkit-transform: rotate(45deg) !important;
+	-moz-transform: rotate(45deg) !important;
+	-o-transform: rotate(45deg) !important;
+	transform: rotate(45deg) !important;
+	-webkit-transition-duration: 1s !important;
+	-moz-transition-duration: 1s !important;
+	-o-transition-duration: 1s !important;
+	transition-duration: 1s !important;
+}
+
+/* Recaptcha */
 .g-recaptcha {
 	padding-left: auto;
 	padding-right: auto;
 }
 
-div#footer-div {
-	text-align: center;
-}
-
-
-img.git-img {
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-	-webkit-transition-duration: 1s;
-	-moz-transition-duration: 1s;
-	-o-transition-duration: 1s;
-	transition-duration: 1s;
-}
-
-img.git-img:hover {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-	-webkit-transition-duration: 1s;
-	-moz-transition-duration: 1s;
-	-o-transition-duration: 1s;
-	transition-duration: 1s;
-}
-
+/* Card Modal Triggers */
 button.ex-modal-trigger {
 	background-color: #455a64 !important;
 }
 
+/* Footer */
+div#footer-div {
+	text-align: center;
+}
+
+div#footer {
+	background-image: linear-gradient(to right, #455a64, #999988) !important;
+}
+
+div#footer div a {
+	color: black !important;
+}
+
 /* Media queries for mobile responsiveness */
 @media screen and (max-width: 768px) and (max-height: 1024px) {
+	nav.navbar {
+		box-shadow: none;
+	}
 	button.card-button {
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		border-radius: 50%;
-		content: none;
+		-webkit-border-radius: 100%;
+		-moz-border-radius: 100%;
+		border-radius: 100%;
 	}
 }
