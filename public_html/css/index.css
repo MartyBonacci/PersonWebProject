@@ -6,6 +6,28 @@ body {
 	-webkit-background-size: auto;
 }
 
+nav.navbar {
+	background-image: linear-gradient(to right, #455a64, #999988) !important;
+	padding: 0px !important;
+}
+
+a.nav-link {
+	margin-top: 5% !important;
+	margin-bottom: 5% !important;
+
+}
+
+a.nav-link:hover {
+	background-color: #999988!important;
+	-webkit-border-radius: 5%;
+	-moz-border-radius: 5%;
+	border-radius: 5%;
+}
+
+div#me-jumbo {
+	background-image: linear-gradient(to right, #455a64, #999988) !important;
+}
+
 div.opacity {
 	opacity: 0.7;
 }
@@ -20,10 +42,38 @@ div#footer-div {
 }
 
 
-@media (max-width: 768px) and (max-height: 1024px) {
+img.git-img {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+img.git-img:hover {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+}
+
+button.ex-modal-trigger {
+	background-color: #455a64 !important;
+}
+
+/* Media queries for mobile responsiveness */
+@media screen and (max-width: 768px) and (max-height: 1024px) {
 	button.card-button {
 		-webkit-border-radius: 50%;
 		-moz-border-radius: 50%;
 		border-radius: 50%;
+		content: none;
 	}
 }

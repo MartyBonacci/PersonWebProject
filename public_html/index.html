@@ -11,17 +11,31 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 				integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-				  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-				  crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-				  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-				  crossorigin="anonymous"></script>
+		<!-- Import 1 -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+				  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+		<!-- Import 2 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
+		<!-- Import 3 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+		<!-- Import 4 -->
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 				  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 				  crossorigin="anonymous"></script>
 
-		<!-- Main JS File -->
+		<!-- Import 5 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+				  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+				  crossorigin="anonymous"></script>
+
+		<!-- jQuery Form, Additional Methods, Validate -->
+		<script type="text/javascript"
+				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+
+		<!-- Form Validator File -->
 		<script src="js/index.js"></script>
 
 		<!-- Event Handler -->
@@ -31,8 +45,8 @@
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body class="m-0 p-0 w-100 container-fluid bg-dark">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light mb-5">
-			<a class="navbar-brand" href="#about-me">Mark Waid Jr</a>
+		<nav class="border-bottom border-secondary navbar fixed-top navbar-expand-lg navbar-light bg-light mb-5">
+			<a class="navbar-brand" href="#about-me">My Portfolio</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -56,10 +70,20 @@
 			</div>
 		</nav><!-- NAV END -->
 
+		<!-- Main Feature Jumbotron -->
+		<div id="me-jumbo" class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<img src="resources/images/me.jpg" alt="Me"/>
+				<h1 class="display-4">Mark Waid Jr</h1>
+				<p class="lead">Hello World!  I am an aspiring web developer.</p>
+			</div>
+		</div>
+
 		<div class="container mt-5">
 			<div class="row ">
 				<!-- About Me -->
-				<div id="about-me" class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
+				<div id="about-me"
+					  class="border rounded-bottom rounded-lg text-wrap ml-auto mr-auto p-3 mt-5 bg-light opacity"
 					  style="width: 100%;">
 					<h2>About Me</h2>
 					<img src="resources/images/coding.png" width="100" height="100" alt="Me"/>
@@ -93,7 +117,8 @@
 					<h2>My Education</h2>
 					<p>
 						I love to learn; learning is one of my favorite activities, and one of my most productive. I have
-						training and experience in a few different fields. I have training/experience in the transportation industry, auto mechanic
+						training and experience in a few different fields. I have training/experience in the transportation
+						industry, auto mechanic
 						industry, cleaning industry, and technology industry. My degrees include a 2 year degree in automotive
 						technology, and a CDL.
 					</p>
@@ -169,7 +194,10 @@
 						</div>
 						<div class="modal-body">
 							<!-- CreateJS Clock Codepen -->
-							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="codecanna" data-slug-hash="yLBVEJO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CreateJS Clock">
+							<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result"
+								data-user="codecanna" data-slug-hash="yLBVEJO"
+								style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+								data-pen-title="CreateJS Clock">
   <span>See the Pen <a href="https://codepen.io/codecanna/pen/yLBVEJO/">
   CreateJS Clock</a> by CodeCanna (<a href="https://codepen.io/codecanna">@codecanna</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
@@ -196,8 +224,12 @@
 						</div>
 						<div class="modal-body">
 							<div class="text-center">
-								<a href="https://github.com/atar-axis/xpadneo/pull/82"><button class="mb-3 btn btn-primary">Xpadneo Driver Config Script</button></a>
-								<a href="https://github.com/CodeCanna/super-duper-archey-installer"><button class="btn btn-primary">Archlinux Install Script</button></a>
+								<a href="https://github.com/atar-axis/xpadneo/pull/82">
+									<button class="mb-3 btn btn-primary">Xpadneo Driver Config Script</button>
+								</a>
+								<a href="https://github.com/CodeCanna/super-duper-archey-installer">
+									<button class="btn btn-primary">Archlinux Install Script</button>
+								</a>
 							</div>
 						</div>
 						<div class="modal-footer">
@@ -207,47 +239,50 @@
 				</div>
 			</div>
 
-			<!-- CARDS START -->
+<!-- CARDS START -->
+
 			<div id="github" class="container mt-5">
 				<div class="row">
 					<!-- Navmenu Example Card -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/nav.png" class="card-img-top" alt="...">
+							<img src="resources/images/nav_cropped.png" class="card-img-top" alt="...">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This is the first nav menu I ever made. I used simple jquery, and lots of CSS to get this
 									menu
 									to work the way I generally want.
 								</p>
-								<button type="button" class="center-block card-button btn btn-primary" data-toggle="modal" data-target="#navMenuModal">
+								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
+										  data-target="#navMenuModal">
 									Open Codepen Example
 								</button>
 								<br>
-								<div class="mt-3 mb-2 mt-2">
-									<a class="mt-3" href="https://github.com/CodeCanna/MySite">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<a class="mt-3" href="https://github.com/CodeCanna/MySite"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- CreateJS Clock example -->
+					<!-- CreateJS Clock Example Card -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/clock.png" class="card-img-top" alt="...">
+							<img id="clock-img" src="resources/images/create_clock.png" class="card-img-top" alt="...">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This example showcases some fun I was having with a really cool JS library called CreateJS.
 									It's
 									a simple clock.
 								</p>
-								<!-- Button trigger modal -->
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#createClock">
+								<!-- Button for CreateJS Clock Example Modal -->
+								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
+										  data-target="#createClock">
 									Open Codepen Example
 								</button>
 								<br>
-								<div class="mt-3 mb-2 mt-2">
-									<a href="https://github.com/CodeCanna/Clock">Fork Me!</a>
+								<div class="mt-3 mb-2 mb-2">
+									<a href="https://github.com/CodeCanna/Clock"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
 								</div>
 							</div>
 						</div>
@@ -256,17 +291,21 @@
 					<!-- Bash Scripts example -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286.4" height="161.1">
+							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286.4"
+								  height="161.1">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
-									This links to my GitHub bash scripts.  They are two bash scripts I wrote many years ago, and helped me get where I am today.
+									This links to my GitHub bash scripts. They are two bash scripts I wrote many years ago, and
+									helped me get where I am today.
 								</p>
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#archInstaller">
+								<!-- Bash Script Modal Trigger Button -->
+								<button type="button" class="ex-modal-trigger card-button btn btn-primary" data-toggle="modal"
+										  data-target="#archInstaller">
 									Open Codepen Example
 								</button>
 								<br>
-								<div class="mt-3 mb-2 mt-2">
-									<a href="https://github.com/CodeCanna/super-duper-archey-installer">Fork Me!</a>
+								<div class="mt-3 mb-2">
+									<img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png">
 								</div>
 							</div>
 						</div>
@@ -281,14 +320,10 @@
 									This simple site is my first full website I ever developed, I wrote everything and used
 									Jquery only.
 								</p>
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal"
-										  data-target="#bizzSiteModal">
-									Open Site Deployment
-								</button>
-								<br>
-								<div class="mt-3 mb-2 mt-2">
-									<a href="https://github.com/CodeCanna/my_bizz">Fork Me!</a>
+								<div class="mt-3 mb-3">
+									<a href="https://github.com/CodeCanna/my_bizz"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
@@ -296,18 +331,16 @@
 					<!-- My ProDev Site -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/coding.png" class="card-img-top" alt="...">
+							<img src="resources/images/prodev.jpg" class="card-img-top" alt="Prodev card image." height="147">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
-									This site showcases my experience throughout the Deep Dive Coding Bootcamp.
+									This site showcases my experience throughout the Deep Dive Coding Bootcamp. It records my
+									experience.
 								</p>
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-									Open Site Deployment
-								</button>
-								<br>
-								<div class="mt-3 mb-2 mt-2">
-									<a href="#">Fork Me!</a>
+								<div class="mb-2 mt-2">
+									<a href="#"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
@@ -318,15 +351,13 @@
 							<img src="resources/images/coding.png" class="border card-img-top" alt="...">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
-									This is my main capstone project I completed while I went throught the bootcamp.
+									This is my main capstone project I completed while I went throughout the Bootcamp. By the Web
+									Birbs.
 								</p>
-								<button type="button" class="card-button btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-									Open Site Deployment
-								</button>
-								<br>
-								<div class="mt-3 mb-2">
-									<a href="#">Fork Me!</a>
+								<div class="mt-2 mb-1">
+									<a href="#"><img class="git-img" src="https://img.icons8.com/color/48/000000/github-2.png"></a>
 								</div>
+								<br>
 							</div>
 						</div>
 					</div>
@@ -447,16 +478,5 @@
 				</div>
 			</footer>
 		</div>
-
-		<!-- jQuery Form, Additional Methods, Validate -->
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
-
-		<!-- Your JavaScript Form Validator -->
-		<script src="public_html/js/form-validate.js"></script>
 	</body>
 </html>

@@ -1,5 +1,5 @@
 /* This JavaScript file handles the menu and button events in the DOM */
-
+"use strict";
 window.onload = function() {
 	// Auto-close Nav
 	$('body').on('click', function() {
@@ -30,8 +30,6 @@ window.onload = function() {
 				cardButtons[i].style.msTransform = 'rotate(0deg)';
 				cardButtons[i].style.oTransform = 'rotate(0deg)';
 				cardButtons[i].style.transform = 'rotate(0deg)';
-
-				console.log("Modal Secondary Close...........");
 			});
 		}
 	}
