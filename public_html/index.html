@@ -32,15 +32,14 @@
 				  crossorigin="anonymous"></script>
 
 		<!-- jQuery Form, Additional Methods, Validate -->
-		<script type="text/javascript"
-				  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
 
 		<!-- Form Validator File -->
 		<script src="js/index.js"></script>
 
 		<!-- Event Handlers -->
 		<script src="js/textCardClickHandler.js"></script>
-		<script src="js/event_handler.js" type="text/javascript"></script>
+		<script src="js/event_handler.js"></script>
 
 
 		<!-- Google reCAPTCHA -->
@@ -189,13 +188,12 @@
 							</button>
 						</div>
 						<div class="modal-body">
-							<img src="resources/images/resume.png" alt="My Resume Preview Image" width="100%" height="100%"/>
+							<img id="resume" src="resources/images/resume.png" alt="My Resume Preview Image"/>
 						</div>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary"><a
-								href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank">Save Resume</a>
-							</button>
+							<a class="btn btn-primary" href="resources/Mark_Allen_Waid_Jr_Resume-2018.pdf" target="_blank">Save
+								Resume</a>
 						</div>
 					</div>
 				</div>
@@ -204,7 +202,7 @@
 			<!-- CARDS START -->
 
 			<div id="github" class="container-fluid mt-5">
-				<div class="row">
+				<div class="row card-deck">
 					<!-- Navmenu Example Card -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
@@ -215,14 +213,14 @@
 									menu
 									to work the way I generally want.
 								</p>
-								<button type="button" class="pen-button pt-4 pb-4 ex-modal-trigger card-button btn btn-primary"
-										  data-toggle="modal"
-										  data-target="#navMenuModal">
-									TRY ME!
-								</button>
+								<div class="code-pen-link">
+									<a class="btn text-white bg-dark" href="https://codepen.io/codecanna/pen/XWrNqxd">TRY ME!</a>
+								</div>
 								<br>
-								<div class="mt-3 mb-2">
-									<a class="mt-3" href="https://github.com/CodeCanna/MySite"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png" alt="GitHub Image"></a>
+								<div class="git-img">
+									<a class="" href="https://github.com/CodeCanna/MySite"><img class="hover_rotate"
+																														 src="https://img.icons8.com/color/48/000000/github-2.png"
+																														 alt="GitHub Image"></a>
 								</div>
 							</div>
 						</div>
@@ -239,13 +237,11 @@
 									a simple clock.
 								</p>
 								<!-- Button for CreateJS Clock Example Modal -->
-								<button type="button" class="pen-button pt-4 pb-4 ex-modal-trigger card-button btn btn-primary"
-										  data-toggle="modal"
-										  data-target="#createClock">
-									TRY ME!
-								</button>
+								<div class="code-pen-link">
+									<a class="btn text-white bg-dark" href="https://codepen.io/codecanna/pen/yLBVEJO">TRY ME!</a>
+								</div>
 								<br>
-								<div class="mt-3 mb-2 mb-2">
+								<div class="git-img">
 									<a href="https://github.com/CodeCanna/Clock"><img class="hover_rotate"
 																									  src="https://img.icons8.com/color/48/000000/github-2.png"
 																									  alt="GitHub Image"></a>
@@ -254,58 +250,23 @@
 						</div>
 					</div>
 
-					<!-- Bash Scripts example -->
+					<!-- Bash Script Example Card -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286.4"
-								  height="161.1">
-							<div class="text-center card-body pl-auto pr-auto pb-1">
-								<p class="mb-5 card-text">
+							<img alt="Bash Image" class="card-img-top" src="resources/images/bash.png" width="286"
+								  height="161">
+							<div class="text-center card-body pl-auto pr-auto">
+								<p class="m-0 card-text">
 									This links to my GitHub bash scripts. They are two bash scripts I wrote many years ago, and
 									helped me get where I am today.
 								</p>
 								<br>
 								<br>
-								<div class="mt-2">
-									<img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
-										  alt="GitHub Image">
-								</div>
-								<br>
-							</div>
-						</div>
-					</div>
-
-					<!-- My Site Before Camp -->
-					<div class="col mt-5">
-						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/bizz.png" class="card-img-top" alt="...">
-							<div class="text-center card-body pl-auto pr-auto">
-								<p class="card-text">
-									This simple site is my first full website I ever developed, I wrote everything and used
-									Jquery only.
-								</p>
-								<div class="mt-3 mb-3">
-									<a href="https://github.com/CodeCanna/my_bizz"><img class="hover_rotate"
-																										 src="https://img.icons8.com/color/48/000000/github-2.png"
-																										 alt="GitHub Image"></a>
-								</div>
-								<br>
-							</div>
-						</div>
-					</div>
-
-					<!-- My ProDev Site -->
-					<div class="col mt-5">
-						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/prodev.jpg" class="card-img-top" alt="Prodev card image." height="147">
-							<div class="text-center card-body pl-auto pr-auto">
-								<p class="card-text">
-									This site showcases my experience throughout the Deep Dive Coding Bootcamp. It records my
-									experience.
-								</p>
-								<div class="mb-2 mt-2">
-									<a href="#"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
-														  alt="GitHub Image"></a>
+								<div class="git-img">
+									<a href="https://github.com/CodeCanna?utf8=%E2%9C%93&tab=repositories&q=&type=&language=shell">
+										<img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
+											  alt="GitHub Image">
+									</a>
 								</div>
 								<br>
 							</div>
@@ -315,15 +276,16 @@
 					<!-- Capstone Project -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/coding.png" class="border card-img-top" alt="...">
+							<img src="resources/images/birb_pic.jpg" class="border card-img-top" alt="..." width="286" height="161">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This is my main capstone project I completed while I went throughout the Bootcamp. By the Web
 									Birbs.
 								</p>
-								<div class="mt-2 mb-1">
-									<a href="#"><img class="hover_rotate" src="https://img.icons8.com/color/48/000000/github-2.png"
-														  alt="GitHub Image"></a>
+								<div class="git-img">
+									<a class="" href="https://github.com/deepdivebirbs/peep"><img class="hover_rotate"
+																										  src="https://img.icons8.com/color/48/000000/github-2.png"
+																										  alt="GitHub Image"></a>
 								</div>
 								<br>
 							</div>
