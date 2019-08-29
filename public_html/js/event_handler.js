@@ -11,8 +11,6 @@ window.onload = function() {
 	// Set menu state
 	let open = false;
 
-	console.log(textMenuItems);
-
 	// Add event listeners
 	for(let i = 0; i < textMenuItems.length; i++) {
 		textMenuItems[i].addEventListener("click", function() {
