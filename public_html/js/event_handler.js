@@ -28,4 +28,11 @@ window.onload = function() {
 	$('body').on('click', function() {
 		$('.navbar-collapse').collapse('hide');
 	});
+
+	let jumboText = document.getElementById("jumbotron-text");
+
+	// Fix spacing issue in Firefox vs Chrome
+	if(window.innerWidth <= 768 && window.innerHeight <= 1024) {
+		jumboText.className = "mt-2";
+	}
 };
