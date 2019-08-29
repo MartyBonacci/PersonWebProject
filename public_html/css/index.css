@@ -7,6 +7,10 @@ body {
 	-webkit-background-size: auto;
 }
 
+img {
+	opacity: 0% !important;
+}
+
 /* Navbar */
 nav.navbar {
 	background-image: linear-gradient(to right, #455a64, #999988) !important;
