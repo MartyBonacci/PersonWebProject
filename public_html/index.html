@@ -10,6 +10,7 @@
 		<link href="css/index.css" rel="stylesheet" type="text/css"/>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 				integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
 
 		<!-- Import 1 -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -82,7 +83,8 @@
 					<div class="pt-auto pb-auto text-center rounded-pill me-info bg-light col-lg">
 						<div class="mt-5 mb-auto">
 							<h1 class="display-4">Mark Waid Jr</h1>
-							<p class="my-auto lead">Hello World! I am an enthusiastic web developer.</p>
+							<p class="my-auto lead"><span id="hello-world">Hello World!</span> I am an enthusiastic web
+								developer.</p>
 						</div>
 					</div>
 				</div>
@@ -133,19 +135,98 @@
 						<div class="col-sm">
 							<h2 class="text-center">My Interests</h2>
 						</div>
-						<div class="col-sm"></div>
+						<div class="mt-2 mb-2 col-sm"></div>
 					</div>
 					<div id="interests-content" class="collapse text-card-content">
-						<p>
-							Going more in depth into my interests, I'm interested in many things. I love music, technology,
-							art,
-							and science just to name a few; I love all music except most country music, me being a web
-							developer,
-							naturally I have a love for technology, art has a place in everyone's heart including mine. I have
-							seen some of the most rare and beautiful art pieces in the world when I went to France. Which
-							brings
-							me to my last big interest - I love to travel to new and interesting places.
-						</p>
+
+						<div class="border-top"></div>
+
+						<!-- FISHING ARTICLE START -->
+						<div class="p-3 row">
+							<div class="col-sm">
+								<img class="img-fluid" src="resources/images/fishing.jpg"/>
+							</div>
+							<div class="col-sm-5">
+								<article>
+									<h3>Fishing</h3>
+									I have been fishing since I was a little kid. I love fishing. I have very early memories
+									of fishing with my Dad and Grandpa. Fishing is a great way to unwind and relax. It also
+									teaches patience. There is nothing like fighting with a big cat fish, or trout; trying to
+									get it landed. I have always wanted to go deep sea fishing and catch a very big salt water
+									fish.
+
+									<h4 class="mt-5">My Favorite Fishing Spots:</h4>
+									<ul>
+										<li><a href="https://www.rivers.gov/rivers/jemez.php">Jemez River</a></li>
+										<li><a href="https://www.americanrivers.org/river/catawba-river/">Catawba River</a></li>
+										<li><a href="http://www.emnrd.state.nm.us/SPD/elephantbuttelakestatepark.html">Elephant
+											Butte</a></li>
+										<li><a href="https://www.daveyslocker.com/deep-sea-fishing-prices/">Ocean...TODO</a></li>
+									</ul>
+								</article>
+							</div>
+						</div>
+
+						<div class="mt-2 mb-2 border-top"></div>
+
+						<!-- HIKING ARTICLE START -->
+						<div class="p-3 row">
+							<div class="col-sm">
+								<img class="img-fluid" src="resources/images/hiking.jpg" alt="Me Hiking"/>
+							</div>
+
+							<div class="col-sm-5">
+								<article>
+									<h4>Hiking</h4>
+									Hiking has been a favorite pastime of mine since childhood. My Mom and Dad always took me to
+									the mountains, and we would hike a little while we fished. Going for hikes is really good for
+									body and mind, and is great exercise. But expect to be very sore the next day if you put
+									effort into finding the most secluded and beautiful spots in New Mexico.
+
+									<h4 class="mt-5">My Favorite Hiking Trails:</h4>
+									<ul>
+										<li><a href="http://www.laluztrail.com/">La Luz (Sandia Mountains, NM)</a></li>
+										<li><a href="https://www.alltrails.com/us/new-mexico/jemez-springs">Jemez Springs Hot
+											Springs (Jemez Mountains, NM)</a></li>
+										<li><a href="https://www.nps.gov/vall/index.htm">Valles Caldera (Jemez Mountains, NM)</a>
+										</li>
+										<li><a href="https://www.nps.gov/vall/index.htm">Jemez Falls (Jemez Mountains, NM)</a>
+										</li>
+									</ul>
+								</article>
+							</div>
+						</div>
+
+						<div class="mt-2 mb-2 border-top"></div>
+
+						<!-- VIDEO GAME ARTICLE START -->
+						<div class="p-3 row">
+							<div class="col-sm">
+								<img class="img-fluid" src="resources/images/video_games.jpg" alt="Me Hiking"/>
+							</div>
+
+							<div class="col-sm-5">
+								<article>
+									<h4>Video Games</h4>
+									I have been playing video games since I can remember.  My favorite childhood games are what
+									helped shape who I am today; the music and culture behind some of the biggest well known titles
+									has a very big impact on the world today.  Video games are a mesh of all the arts and sciences
+									coming together to make and entire interactive world.  Music, art, science, storytelling, software
+									development, and much more, it's a very under-valued form of entertainment.  Fun fact the video
+									game industry passed the movie industry in profits.
+
+									<h4 class="mt-5">My Favorite Video Games:</h4>
+									<ul>
+										<li><a href="https://en.wikipedia.org/wiki/Spyro">Spyro</a></li>
+										<li><a href="https://en.wikipedia.org/wiki/Crash_Bandicoot">Crash Bandicoot</a></li>
+										<li><a href="https://en.wikipedia.org/wiki/The_Legend_of_Zelda">Legend of Zelda</a>
+										</li>
+										<li><a href="https://www.pokemon.com/us/">Pokemon</a>
+										</li>
+									</ul>
+								</article>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -219,8 +300,8 @@
 								<br>
 								<div class="git-img">
 									<a class="" href="https://github.com/CodeCanna/MySite"><img class="hover_rotate"
-																														 src="https://img.icons8.com/color/48/000000/github-2.png"
-																														 alt="GitHub Image"></a>
+																													src="https://img.icons8.com/color/48/000000/github-2.png"
+																													alt="GitHub Image"></a>
 								</div>
 							</div>
 						</div>
@@ -276,7 +357,8 @@
 					<!-- Capstone Project -->
 					<div class="col mt-5">
 						<div class="card ml-auto mr-auto" style="width: 18rem;">
-							<img src="resources/images/birb_pic.jpg" class="border card-img-top" alt="..." width="286" height="161">
+							<img src="resources/images/birb_pic.jpg" class="border card-img-top" alt="..." width="286"
+								  height="161">
 							<div class="text-center card-body pl-auto pr-auto">
 								<p class="card-text">
 									This is my main capstone project I completed while I went throughout the Bootcamp. By the Web
@@ -284,8 +366,8 @@
 								</p>
 								<div class="git-img">
 									<a class="" href="https://github.com/deepdivebirbs/peep"><img class="hover_rotate"
-																										  src="https://img.icons8.com/color/48/000000/github-2.png"
-																										  alt="GitHub Image"></a>
+																													  src="https://img.icons8.com/color/48/000000/github-2.png"
+																													  alt="GitHub Image"></a>
 								</div>
 								<br>
 							</div>

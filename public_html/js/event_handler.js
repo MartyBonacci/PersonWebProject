@@ -22,7 +22,6 @@ window.onload = function() {
 			} else {
 				textMenuIcons[i].className = "text-menu-icon hover_rotate open";
 			}
-
 			open = !open;
 		});
 	}

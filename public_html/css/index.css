@@ -65,6 +65,10 @@ div.opacity {
 	opacity: 0.7;
 }
 
+span#hello-world {
+	font-family: 'VT323', monospace;
+}
+
 /* Menu Icon State Classes */
 p.text-menu-icon.hover_rotate {
 	position: absolute;
